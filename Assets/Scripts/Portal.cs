@@ -6,6 +6,8 @@ using UnityEngine.Rendering;
 public class Portal : MonoBehaviour
 {
     public Material[] materials;
+    public InstagramAPIIntergration GetInstagramAPIIntergrationScript;
+
     // Start is called before the first frame update
     void Start()
 
@@ -40,6 +42,8 @@ public class Portal : MonoBehaviour
             {
                 mat.SetInt("stest",(int)CompareFunction.Equal);
             }
+            GetInstagramAPIIntergrationScript.UpdateInstagramPictureMaterials(true);
+
             
         }
 
@@ -50,7 +54,8 @@ public class Portal : MonoBehaviour
             {
                 mat.SetInt("stest", (int)CompareFunction.NotEqual);
             }
-            
+            GetInstagramAPIIntergrationScript.UpdateInstagramPictureMaterials(false);
+
         }
 	}
 }
