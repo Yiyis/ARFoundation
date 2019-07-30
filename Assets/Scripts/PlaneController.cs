@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class PlaneController : MonoBehaviour
 {
     ARPlaneManager m_ARPlaneManager;
+    ARPointCloudManager m_ARPiontCloudManager;
+
     public Text buttonText;
 
 	private void Awake()
 	{
         m_ARPlaneManager = GetComponent<ARPlaneManager>();
+        m_ARPiontCloudManager = GetComponent<ARPointCloudManager>();
 	}
 
 	// Start is called before the first frame update
@@ -29,6 +32,7 @@ public class PlaneController : MonoBehaviour
     public void TogglePlaneDetectionAndVisibility()
     {
         m_ARPlaneManager.enabled = !m_ARPlaneManager.enabled;
+        m_ARPiontCloudManager.enabled = !m_ARPiontCloudManager.enabled;
 
         if(m_ARPlaneManager.enabled)
         {
