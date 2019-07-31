@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
         if (m_CameraManager != null)
             m_CameraManager.frameReceived += FrameChanged;
 
-        PlaceMultipleObjectsOnPlane.onPlacedObject += PlacedObject;
+        PortalPlacer.onPlaceObject += PlacedObject;
     }
 
     void OnDisable()
@@ -78,7 +78,7 @@ public class UIManager : MonoBehaviour
         if (m_CameraManager != null)
             m_CameraManager.frameReceived -= FrameChanged;
 
-        PlaceMultipleObjectsOnPlane.onPlacedObject -= PlacedObject;
+        PortalPlacer.onPlaceObject -= PlacedObject;
     }
 
     void FrameChanged(ARCameraFrameEventArgs args)

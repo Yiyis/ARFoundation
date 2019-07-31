@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.XR;
 using UnityEngine.XR.ARFoundation;
+
 
 public class PortalPlacer : MonoBehaviour
 {
@@ -16,7 +18,10 @@ public class PortalPlacer : MonoBehaviour
     //This is the gameobject reference instantiated after a successsful raycast intersection with a plane
     private GameObject spawnedPortal;
 
-	private void Awake()
+    public static event Action onPlaceObject;
+
+
+    private void Awake()
 	{
         m_ARRaycastManager = GetComponent<ARRaycastManager>();
 	}
@@ -52,9 +57,11 @@ public class PortalPlacer : MonoBehaviour
                     spawnedPortal.transform.eulerAngles = new Vector3(rotationOfPortal.x,Camera.main.transform.rotation.eulerAngles.y,rotationOfPortal.z);
 
                 }
-                
+                onPlaceObject();
+
             }
-            
+          
         }
     }
 }
+
