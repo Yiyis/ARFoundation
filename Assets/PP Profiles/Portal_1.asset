@@ -101,7 +101,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 6.75
+        intensity: 2.4
         threshold: 1.17
         softKnee: 0.53
         radius: 3.3

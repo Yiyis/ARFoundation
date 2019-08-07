@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ARFoundationScene.unity
-    guid: f3cef2da98e194c51958e7e666ac362b
+    path: Assets/ARFantasyWorld.unity
+    guid: 6183bf232b0434110b085702ad96e287
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 72ee12f767b3a4b11b8735796f2c2d78,
       type: 2}
